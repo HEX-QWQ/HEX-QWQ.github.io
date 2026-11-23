@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fold Metric 工作台</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="dot"></span>
+    <div>
+      <h1>Fold Metric 工作台</h1>
+      <p>结构预测 · 界面指标排名 · 50 组（1 正 + 49 负）</p>
+    </div>
+  </div>
+  <div class="meta">
+    <span id="live-badge" class="live hidden">LIVE</span>
+    <span id="mock-badge" class="badge hidden">示例数据</span>
+    <span id="generated" class="muted"></span>
+  </div>
+</header>
+
+<main>
+  <section class="gpu-wrap">
+    <div class="gpu-wrap-head">
+      <h2>GPU 状态</h2>
+      <span class="muted" id="gpu-totals"></span>
+    </div>
+    <div id="gpu-strip" class="gpu-strip hidden"></div>
+  </section>
+
+  <section id="overview">
+    <div class="toolbar">
+      <div class="chips" id="model-chips" aria-label="模型筛选"></div>
+      <div class="legend" id="overview-legend"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>各模型 Top-k 命中（全 50 组）</h2>
+        <span class="muted" id="summary-note"></span>
+      </div>
+      <div id="summary-blocks"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>任务</h2>
+        <span class="muted">点击查看每组在每个指标下的排序</span>
+      </div>
+      <div class="task-grid" id="task-grid"></div>
+    </div>
+  </section>
+
+  <section id="detail" class="hidden">
+    <div class="detail-head">
+      <button id="back" class="ghost">← 返回</button>
+      <div>
+        <h2 id="detail-title"></h2>
+        <p class="muted" id="detail-sub"></p>
+      </div>
+      <div class="legend">
+        <span class="lg"><i class="sw pos"></i>正样本</span>
+        <span class="lg"><i class="sw neg"></i>负样本</span>
+        <span class="lg"><i class="sw empty"></i>空位</span>
+        <span class="lg"><i class="sw zero"></i>精确 0（不可排名）</span>
+        <span class="lg muted">按该指标从好到差排列，绿色格子所在位置 = 正样本名次</span>
+      </div>
+    </div>
+    <div id="detail-body"></div>
+  </section>
+
+  <div id="error" class="error hidden"></div>
+</main>
+
+<footer class="foot">
+  <span>数据来自 <code>data/manifest.json</code> + <code>data/tasks/*.json</code>，由 <code>scripts/build_workbench_data.py</code> 生成</span>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
