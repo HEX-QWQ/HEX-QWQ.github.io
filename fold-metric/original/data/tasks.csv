@@ -1,0 +1,51 @@
+﻿id,antigen,antigen_len
+POS001,reverse transcriptase p51,419
+POS002,hiv-1 yu2 gp120,337
+POS003,e3 glycoprotein,60
+POS004,influenza a virus (strain a/vietnam/1203/2004h5n1),337
+POS005,ebola virus (makona) gp2,97
+POS006,cchfv envelope protein gc fusion loops,54
+POS007,gag protein,73
+POS008,e-antigen,148
+POS009,ns1c,68
+POS010,major capsid protein,306
+POS011,a33r,87
+POS012,spike glycoprotein s1,170
+POS013,nucleoprotein,102
+POS014,envelope glycoprotein e2,138
+POS015,coat protein,402
+POS016,human coronavirus hku1 (isolate n1),308
+POS017,glycoprotein g2,151
+POS018,glycoprotein g1,194
+POS019,spike glycoprotein,206
+POS020,hemagglutinin,170
+POS021,envelope glycoprotein b,113
+POS022,hepatitis a virus cellular receptor 2,110
+POS023,envelope glycoprotein e,128
+POS024,protein rev,61
+POS025,prm protein,80
+POS026,capsid protein vp1,277
+POS027,neuraminidase,364
+POS028,spike glycoprotein e2,331
+POS029,envelopment polyprotein,321
+POS030,membrane protein,198
+POS031,envelope glycoprotein gp41,91
+POS032,coxsackievirus a6,240
+POS033,capsid protein,190
+POS034,major capsid protein l1,427
+POS035,mammarenavirus machupoense,204
+POS036,severe acute respiratory syndrome coronavirus2,117
+POS037,envelope polyprotein,340
+POS038,integrase,144
+POS039,envelope glycoprotein,186
+POS040,glycoprotein,389
+POS041,envelope protein e,388
+POS042,nsmgngc,301
+POS043,cap228 autologous scaffolded v1v2,104
+POS044,ul131a,108
+POS045,glycoprotein 42,136
+POS046,viral attachment protein sigma 1,163
+POS047,nipah virus,505
+POS048,mers-cov s1-ntd,334
+POS049,fusion glycoprotein f0,323
+POS050,vesicular stomatitis virus,495

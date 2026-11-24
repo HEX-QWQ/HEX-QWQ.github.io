@@ -4,7 +4,7 @@ const DATA_ROOT = "data/";
 const GRID_COLS = 7;
 const GRID_ROWS = 8;
 const GRID_CELLS = GRID_COLS * GRID_ROWS; // 56 slots for 50 samples
-const POLL_MS = 0; // static snapshot: no polling
+const POLL_MS = 0;
 
 const state = {
   manifest: null,
@@ -61,8 +61,6 @@ async function boot() {
   state.status = await getJSON(DATA_ROOT + "status.json", true);
 
   if (state.manifest.mock) $("#mock-badge").classList.remove("hidden");
-  $("#generated").textContent = "静态快照 · 数据截止 " +
-    state.manifest.generated_at.replace("T", " ").slice(0, 16) + " · 三个模型各 2500 条";
   $("#summary-note").textContent =
     `${state.manifest.n_tasks} 组 · ${state.manifest.models.length} 个模型 · ${state.manifest.metrics.length} 个指标`;
 
@@ -87,7 +85,7 @@ function showError(err) {
 /* ------------------------------ polling ----------------------------- */
 
 function startPolling() {
-  if (!POLL_MS) return;               // static snapshot
+  if (!POLL_MS) return;
   if (state.polling) clearInterval(state.polling);
   state.polling = setInterval(tick, POLL_MS);
 }
